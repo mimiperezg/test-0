@@ -1,39 +1,30 @@
 const myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello world!";
+myHeading.textContent = "Hello i am mimi perez";
+
+let myImage = document.getElementById('my-image');
 
 
-const myImage = document.querySelector("img");
-
-myImage.onclick = () => {
+myButton.onclick = () => {
   const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/firefox-icon.png") {
-    myImage.setAttribute("src", "images/firefox2.png");
+  if (mySrc === "https://i.ibb.co/KjhnkvJ/image.jpg") {
+      myImage.setAttribute("src", "images/image2.jpeg");
   } else {
-    myImage.setAttribute("src", "images/firefox-icon.png");
+      myImage.setAttribute("src", "https://i.ibb.co/KjhnkvJ/image.jpg");
   }
 };
 
+
+function displayBnnuy() {
+    const image = document.getElementById('my-image');
+    image.style.display = 'block';
+  }
+  
+  // Event listener for button click to display image
+  document.getElementById('bnnuy-button').addEventListener('click', function() {
+    displayBnnuy();
+  });
+
+
 let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
 
-function setUserName() {
-    const myName = prompt("Please enter your name.");
-    if (!myName) {
-      setUserName();
-    } else {
-      localStorage.setItem("name", myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
-    }
-  }
-
-  if (!localStorage.getItem("name")) {
-    setUserName();
-  } else {
-    const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mozilla is cool, ${storedName}`;
-  }
-
-  myButton.onclick = () => {
-    setUserName();
-  };
 
