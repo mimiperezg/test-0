@@ -1,8 +1,9 @@
-const myHeading = document.querySelector("h1");
+let myHeading = document.querySelector("h1");
 myHeading.textContent = "Hello i am mimi perez";
 
-let myImage = document.getElementById('my-image');
-
+let myImage = document.getElementById('my-bnnuy');
+let myButton = document.querySelector("button");
+let myInvite = document.getElementById('my-invite');
 
 myButton.onclick = () => {
   const mySrc = myImage.getAttribute("src");
@@ -13,18 +14,28 @@ myButton.onclick = () => {
   }
 };
 
-
 function displayBnnuy() {
-    const image = document.getElementById('my-image');
+    const image = document.getElementById('my-bnnuy');
     image.style.display = 'block';
+}
+
+// Event listener for button click to display image
+document.getElementById('bnnuy-button').addEventListener('click', function() {
+  displayBnnuy();
+});
+
+// Separate function for myInvite button
+function setUserName() {
+  let myName = prompt('Please enter your name.');
+  if (!myName) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = 'You are invited mimis birthday party, ' + myName;
   }
-  
-  // Event listener for button click to display image
-  document.getElementById('bnnuy-button').addEventListener('click', function() {
-    displayBnnuy();
-  });
+}
 
-
-let myButton = document.querySelector("button");
-
-
+// Event listener for myInvite button click
+myInvite.onclick = function() {
+  setUserName();
+}
