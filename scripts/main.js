@@ -1,5 +1,5 @@
 let myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello i am mimi perez";
+myHeading.textContent = "Hello you are invited mimis birthday party, friend";
 
 let myImage = document.getElementById('my-bnnuy');
 let myButton = document.querySelector("button");
@@ -31,7 +31,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'You are invited mimis birthday party, ' + myName;
+    myHeading.innerHTML = 'Hello you are invited mimis birthday party, ' + myName;
   }
 }
 
