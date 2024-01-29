@@ -1,5 +1,5 @@
 let myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello you are invited mimis birthday party, friend";
+myHeading.textContent = "Hello friend you are invited mimis birthday party";
 
 let myImage = document.getElementById('my-bnnuy');
 let myButton = document.querySelector("button");
@@ -26,12 +26,12 @@ document.getElementById('bnnuy-button').addEventListener('click', function() {
 
 // Separate function for myInvite button
 function setUserName() {
-  let myName = prompt('Please enter your name.');
+  let myName = prompt('ur name plz');
   if (!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Hello you are invited mimis birthday party, ' + myName;
+    myHeading.innerHTML = 'Hello ' + myName + ' you are invited mimis birthday party';
   }
 }
 
