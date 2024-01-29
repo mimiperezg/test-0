@@ -39,3 +39,8 @@ function setUserName() {
 myInvite.onclick = function() {
   setUserName();
 }
+
+// Call setUserName function when the page loads
+window.onload = function() {
+  setUserName();
+};
