@@ -2,7 +2,6 @@ let myHeading = document.querySelector("h1");
 myHeading.textContent = "Hello friend you are invited mimis birthday party";
 
 let myImage = document.getElementById('my-bnnuy');
-let myButton = document.querySelector("button");
 let myInvite = document.getElementById('my-invite');
 
 myButton.onclick = () => {
